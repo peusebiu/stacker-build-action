@@ -27,8 +27,8 @@ export class StackerCLI {
     async convertDockerfile(dockerfile: string): Promise<[Promise<CommandResult>, ConvertResult]> {
         const args: string[] = ["--debug"];
 
-        const stackerfile = "stacker.yaml"
-        const subfile = "stacker-subs.yaml"
+        const stackerfile = "stacker.yaml";
+        const subfile = "stacker-subs.yaml";
 
         args.push("convert");
         args.push("--docker-file");
@@ -74,7 +74,7 @@ export class StackerCLI {
             args.push("--stacker-file-pattern");
             args.push(stackerfilePattern);
         } else {
-            args.push("build")
+            args.push("build");
             args.push("-f");
             args.push(stackerfile);
         }
